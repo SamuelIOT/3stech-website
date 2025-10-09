@@ -1,0 +1,40 @@
+{
+  "name": "3stech",
+  "version": "1.0.0",
+  "description": "3S Tech Inc. - Business Intelligence and Data Analysis",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [
+    "business-intelligence",
+    "cognos",
+    "power-bi",
+    "data-analysis"
+  ],
+  "author": "3S Tech Inc.",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^24.7.0",
+    "@types/nodemailer": "^7.0.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.37.0",
+    "eslint-config-next": "^15.5.4",
+    "framer-motion": "^12.23.22",
+    "lucide-react": "^0.545.0",
+    "next": "^15.5.4",
+    "nodemailer": "^7.0.9",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}

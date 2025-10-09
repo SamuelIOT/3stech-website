@@ -1,0 +1,8 @@
+{
+  "/process/page": "app/process/page.js",
+  "/services/power-bi-platform-reports/page": "app/services/power-bi-platform-reports/page.js",
+  "/services/cognos-platform-maintenance/page": "app/services/cognos-platform-maintenance/page.js",
+  "/about/page": "app/about/page.js",
+  "/services/cognos-to-powerbi/page": "app/services/cognos-to-powerbi/page.js",
+  "/assessment/page": "app/assessment/page.js"
+}

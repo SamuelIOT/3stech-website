@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# API keys and secrets
+*.key
+config.local.*
+
+# Assessment data (contains personal information)
+/data/
+/data/*.json
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
