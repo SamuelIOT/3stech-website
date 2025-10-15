@@ -13,3 +13,10 @@ config.local.*
 node_modules/
 __pycache__/
 *.pyc
+
+# Next.js
+.next/
+out/
+
+# Vercel
+.vercel
