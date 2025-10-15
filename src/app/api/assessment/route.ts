@@ -66,6 +66,13 @@ function createTransporter() {
 
 // Save assessment data to JSON file
 async function saveAssessmentData(data: AssessmentData) {
+  // In production (Vercel), filesystem writes are not supported
+  // Data will be sent via email instead
+  if (process.env.VERCEL) {
+    console.log('Running on Vercel - skipping filesystem write')
+    return true
+  }
+  
   try {
     const dataDir = path.join(process.cwd(), 'data')
     const filePath = path.join(dataDir, 'assessments.json')
@@ -95,7 +102,9 @@ async function saveAssessmentData(data: AssessmentData) {
     return true
   } catch (error) {
     console.error('Error saving assessment data:', error)
-    return false
+    // Don't fail the request if we can't save to file
+    // Email notification is the primary method in production
+    return true
   }
 }
 
@@ -473,14 +482,13 @@ export async function POST(request: NextRequest) {
     
     console.log('Validation passed, saving data...')
     
-    // Save data
-    const dataSaved = await saveAssessmentData(assessmentData)
-    if (!dataSaved) {
-      console.error('Failed to save data to file')
-      throw new Error('Failed to save assessment data')
-    }
+    // Save data (optional in production - email is primary method)
+    await saveAssessmentData(assessmentData).catch(err => {
+      console.error('Warning: Failed to save data to file:', err)
+      // Continue anyway - email is the primary method
+    })
     
-    console.log('Data saved successfully, sending emails...')
+    console.log('Data saved (or skipped in production), sending emails...')
     
     // Send emails (non-blocking - don't fail if email fails)
     const [confirmationSent, notificationSent] = await Promise.all([
