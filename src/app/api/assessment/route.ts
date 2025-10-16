@@ -43,7 +43,8 @@ function createTransporter() {
 
   try {
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.zoho.com',
+      service: 'gmail',
+      host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: false,
       auth: {
