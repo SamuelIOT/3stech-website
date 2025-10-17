@@ -6,6 +6,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
     "/assessment/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -16,30 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/assessment/page.js"
     ],
-    "/about/page": [
+    "/api/assessment/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
-    ],
-    "/process/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/process/page.js"
-    ],
-    "/services/cognos-to-powerbi/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/cognos-to-powerbi/page.js"
-    ],
-    "/services/power-bi-platform-reports/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/power-bi-platform-reports/page.js"
-    ],
-    "/services/cognos-platform-maintenance/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/services/cognos-platform-maintenance/page.js"
+      "static/chunks/app/api/assessment/route.js"
     ]
   }
 }
